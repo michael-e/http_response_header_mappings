@@ -1,10 +1,10 @@
-All source code included in the "HTTP Status Line Mappings"
-archive is, unless otherwise specified, released under the MIT licence as 
+All source code included in the "HTTP Response Header Mappings"
+archive is, unless otherwise specified, released under the MIT licence as
 follows:
 
 ----- begin license block -----
 
-Copyright 2010-2011 Michael Eichelsdoerfer
+Copyright 2012 Michael Eichelsdoerfer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
