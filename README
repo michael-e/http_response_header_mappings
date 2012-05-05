@@ -1,9 +1,9 @@
 HTTP Response Header Mappings
 -----------------------------
 
-Version: 1.0
+Version: 1.2
 Author: Michael Eichelsdoerfer
-Build Date: 2012-03-17
+Build Date: 2012-05-05
 Requirements: Symphony 2.0.6 or greater
 
 
@@ -21,7 +21,7 @@ extension.
 [INSTALLATION]
 
 1. Enable the extension
-2. Add HTTP resposne header mappings to your /manifest/config.php file with
+2. Add HTTP response header mappings to your /manifest/config.php file with
    the format 'PAGE TYPE' => 'RESPONSE HEADER', e.g.:
 
 		###### HTTP-RESPONSE-HEADER-MAPPINGS ######
