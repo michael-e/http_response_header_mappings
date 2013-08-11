@@ -30,18 +30,19 @@
 
 		public function install(){
 			$initial_mappings = array(
-				'503'   => 'HTTP/1.1 503 Service Unavailable',
-				'ra1h'  => 'Retry-After: 3600',
-				'ra3h'  => 'Retry-After: 10800',
-				'ra24h' => 'Retry-After: 86400',
-				'xml'   => 'Content-Type: text/xml; charset=utf-8',
-				'txt'   => 'Content-Type: text/plain; charset=utf-8',
-				'js'    => 'Content-Type: application/x-javascript; charset=utf-8',
-				'css'   => 'Content-Type: text/css; charset=utf-8',
-				'csv'   => 'Content-Type: text/comma-separated-values; charset=utf-16',
-				'xls'   => 'Content-Type: application/msexcel',
-				'rss'   => 'Content-Type: application/rss+xml',
-				'text'  => 'Content-Type: text/plain',
+				'503' => 'HTTP/1.1 503 Service Unavailable',
+				'ra1h' => 'Retry-After: 3600',
+				'ra1d' => 'Retry-After: 86400',
+				'ra1w' => 'Retry-After: 604800',
+				'xml' => 'Content-Type: text/xml; charset=utf-8',
+				'txt' => 'Content-Type: text/plain; charset=utf-8',
+				'js' => 'Content-Type: application/x-javascript; charset=utf-8',
+				'json' => 'Content-Type: application/json; charset=utf-8',
+				'css' => 'Content-Type: text/css; charset=utf-8',
+				'csv' => 'Content-Type: text/comma-separated-values; charset=utf-16',
+				'xls' => 'Content-Type: application/msexcel',
+				'rss' => 'Content-Type: application/rss+xml',
+				'text' => 'Content-Type: text/plain',
 			);
 
 			foreach($initial_mappings as $page_type => $response_header){
@@ -56,7 +57,6 @@
 		}
 
 		public function resolveHeader($page_type){
-			return Symphony::Configuration()->get($page_type, self::SETTINGS_GROUP);
 			if($page_type{0} == '.'){
 				return Symphony::Configuration()->get(substr($page_type, 1), self::SETTINGS_GROUP);
 			}
