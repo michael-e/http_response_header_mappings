@@ -48,12 +48,12 @@
 			foreach($initial_mappings as $page_type => $response_header){
 				Symphony::Configuration()->set($page_type, $response_header, self::SETTINGS_GROUP);
 			}
-			Administration::instance()->saveConfig();
+			Symphony::Configuration()->write();
 		}
 
 		public function uninstall(){
 			Symphony::Configuration()->remove(self::SETTINGS_GROUP);
-			Administration::instance()->saveConfig();
+			Symphony::Configuration()->write();
 		}
 
 		public function resolveHeader($page_type){
