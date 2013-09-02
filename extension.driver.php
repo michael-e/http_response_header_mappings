@@ -3,20 +3,6 @@
 	Final Class extension_HTTP_Response_Header_Mappings extends Extension{
 
 		const SETTINGS_GROUP = 'http-response-header-mappings';
-		const EXT_NAME = 'HTTP Response Header Mappings';
-
-		public function about(){
-			return array(
-				'name' => self::EXT_NAME,
-				'version' => '1.0',
-				'release-date' => '2012-03-17',
-				'author'       => array(
-					'name'    => 'Michael Eichelsdoerfer',
-					'website' => 'http://www.michael-eichelsdoerfer.de',
-					'email'   => 'info@michael-eichelsdoerfer.de'
-				)
-			);
-		}
 
 		public function getSubscribedDelegates(){
 			return array(

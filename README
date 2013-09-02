@@ -1,12 +1,6 @@
 HTTP Response Header Mappings
 -----------------------------
 
-Version: 1.2
-Author: Michael Eichelsdoerfer
-Build Date: 2012-05-05
-Requirements: Symphony 2.0.6 or greater
-
-
 Allows more control over Frontend page HTTP response headers using
 customizable page types. Each mapping is stored in the Symphony config file,
 and page type is matched against these mappings.
