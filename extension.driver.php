@@ -30,7 +30,6 @@ final class extension_HTTP_Response_Header_Mappings extends Extension{
             'csv' => 'Content-Type: text/comma-separated-values; charset=utf-16',
             'xls' => 'Content-Type: application/msexcel',
             'rss' => 'Content-Type: application/rss+xml',
-            'text' => 'Content-Type: text/plain',
         );
 
         foreach ($initial_mappings as $page_type => $response_header) {
