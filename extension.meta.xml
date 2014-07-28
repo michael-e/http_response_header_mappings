@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension id="http_response_header_mappings" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
 	<name>HTTP Response Header Mappings</name>
-	<repo type="github">https://github.com/BayernSPD/http_response_header_mappings</repo>
+	<repo type="github">https://github.com/michael-e/http_response_header_mappings</repo>
 	<types>
 		<type>Other</type>
 	</types>
