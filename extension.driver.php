@@ -62,8 +62,13 @@ final class extension_HTTP_Response_Header_Mappings extends Extension
             $page_type = strtolower($page_type);
             $response_header = $this->resolveHeader($page_type);
 
-            if (!is_null($response_header)) {
-                Frontend::Page()->addHeaderToPage($response_header);
+            // Symphony builds an array of headers, thus expects name/value pairs
+            $header_array = explode(':', $response_header, 2);
+            $name = trim($header_array[0]);
+            $value = trim($header_array[1]);
+
+            if (!empty($name)) {
+                Frontend::Page()->addHeaderToPage($name, empty($value) ? null : $value);
             }
             if ($page_type{0} == '.') {
                 $file_name = $page_data['handle'];
