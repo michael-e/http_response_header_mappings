@@ -1,7 +1,7 @@
 <?php
 
-final class extension_HTTP_Response_Header_Mappings extends Extension{
-
+final class extension_HTTP_Response_Header_Mappings extends Extension
+{
     const SETTINGS_GROUP = 'http-response-header-mappings';
 
     public function getSubscribedDelegates()
