@@ -46,17 +46,19 @@ final class extension_HTTP_Response_Header_Mappings extends Extension
 
     public function resolveHeader($page_type)
     {
-        if ($page_type{0} == '.') {
+        if (substr($page_type, 0, 1) === '.') {
             return Symphony::Configuration()->get(substr($page_type, 1), self::SETTINGS_GROUP);
         } else {
             return Symphony::Configuration()->get($page_type, self::SETTINGS_GROUP);
         }
     }
 
-    public function setHeader(array $context=NULL)
+    public function setHeader(array $context=null)
     {
         $page_data = Frontend::Page()->pageData();
-        if(!isset($page_data['type']) || !is_array($page_data['type']) || empty($page_data['type'])) return;
+        if (!isset($page_data['type']) || !is_array($page_data['type']) || empty($page_data['type'])) {
+            return;
+        }
 
         foreach ($page_data['type'] as $page_type) {
             $page_type = strtolower($page_type);
@@ -70,7 +72,7 @@ final class extension_HTTP_Response_Header_Mappings extends Extension
             if (!empty($name)) {
                 Frontend::Page()->addHeaderToPage($name, empty($value) ? null : $value);
             }
-            if ($page_type{0} == '.') {
+            if (substr($page_type, 0, 1) === '.') {
                 $file_name = $page_data['handle'];
                 Frontend::Page()->addHeaderToPage('Content-Disposition', "attachment; filename={$file_name}{$page_type}");
             }
